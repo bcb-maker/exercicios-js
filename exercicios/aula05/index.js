@@ -7,25 +7,56 @@
 
 // Exercício 1 — classificarIdade
 export function classificarIdade(idade) {
-  // escreva seu código aqui
+  if (idade < 12){
+    return 'criança'
+  } else if(idade >= 18){
+    return "adulto"
+  }else{
+    return "adolescente"   
+  }
 }
 
 // Exercício 2 — calcularDesconto
 export function calcularDesconto(preco, percentual) {
-  // escreva seu código aqui
+  if (percentual <0 || percentual > 100){
+    console.log('Percentual não permitido')
+  }
+  return preco - (preco  * percentual/100)
 }
 
 // Exercício 3 — verificarAprovacao
 export function verificarAprovacao(nota) {
-  // escreva seu código aqui
+  if(nota >= 60){
+    return 'aprovado'
+  }
+  else if (nota >= 40){
+    return 'recuperação'
+  }
+  else{
+    return 'reprovado'
+  }
 }
 
 // Exercício 4 — somarPares
 export function somarPares(numeros) {
-  // escreva seu código aqui
+  let soma = 0
+  let numero
+  for (numero of numeros){
+    if(numero % 2 === 0){
+      soma += numero
+    }
+  }
+  return soma 
 }
 
 // Exercício 5 — contarLetra
 export function contarLetra(texto, letra) {
-  // escreva seu código aqui
+  let somaContador = 0
+  let caracter
+  for(caracter of texto){
+    if(caracter === letra){
+      somaContador ++
+    }
+  }
+  return somaContador
 }
